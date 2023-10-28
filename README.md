@@ -50,5 +50,8 @@ Each link below leads to a sample scene exploring various topics, accompanied by
 - [Scene Play-Mode: Review Unit Tests in PlayMode](./Assets/Scenes/SampleScene-PlayMode/README.md)
 
 ### Tools and Resources
+- [QA Tester Observation Document](https://docs.google.com/document/d/1feU3r8F7H40Dh9vYi8KTMp0YbAhygBbhiATrgwyXiDc/edit?usp=sharing)
+- [Playtest Feedback Form](https://forms.gle/iV8vBYWZPZDqKNRQ6)
+- [QA Compatibility Testing Template](https://docs.google.com/spreadsheets/d/18AXQnnwhgZfwEr188tJDLhgXeNagmMFVBCE8w1_GsZA/edit?usp=sharing)
 - All the game code is available on [GitHub](https://github.com/CalebVaccaro/QAEventExample/).
-- [Unity Test Framework](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/getting-started.html)
+- [Unity Test Framework Documentation](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/getting-started.html)
