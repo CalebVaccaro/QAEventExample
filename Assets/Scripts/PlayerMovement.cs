@@ -1,39 +1,77 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float rotationSpeed = 3.0f;
+    public CharacterController cc;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Camera cam;
+    [SerializeField] private float Sensitivity;
 
-    private CharacterController controller;
+    [SerializeField]
+    private float speed, walk, run, crouch;
+
+    private Vector3 crouchScale, normalScale;
+
+    public bool isMoving, isCrouching, isRunning;
+
+    private float X, Y;
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
+        speed = walk;
+        crouchScale = new Vector3(1, .75f, 1);
+        normalScale = new Vector3(1, 1, 1);
+        cc = GetComponent<CharacterController>();
+        cc.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
-
     private void Update()
     {
-        // Input handling
+        #region Camera Limitation Calculator
+        //Camera limitation variables
+        const float MIN_Y = -60.0f;
+        const float MAX_Y = 70.0f;
+
+        X += Input.GetAxis("Mouse X") * (Sensitivity * Time.deltaTime);
+        Y -= Input.GetAxis("Mouse Y") * (Sensitivity * Time.deltaTime);
+
+        if (Y < MIN_Y)
+            Y = MIN_Y;
+        else if (Y > MAX_Y)
+            Y = MAX_Y;
+        #endregion
+        transform.localRotation = Quaternion.Euler(Y, X, 0.0f);
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+        Vector3 forward = transform.forward * vertical;
+        Vector3 right = transform.right * horizontal;
 
-        // Calculate the movement direction based on camera's forward direction
-        Vector3 forwardDirection = Camera.main.transform.forward;
-        forwardDirection.y = 0.0f;
-        forwardDirection.Normalize();
-
-        Vector3 moveDirection = (forwardDirection * vertical + Camera.main.transform.right * horizontal).normalized;
-
-        // Apply rotation based on input
-        if (moveDirection != Vector3.zero)
+        cc.SimpleMove((forward + right) * speed);
+        // Determines if the speed = run or walk
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            speed = run;
+            isRunning = true;
         }
-
-        // Apply movement to the CharacterController
-        controller.Move(moveDirection * speed * Time.deltaTime);
+        //Crouch
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            isCrouching = true;
+            isRunning = false;
+            speed = crouch;
+            player.transform.localScale = crouchScale;
+        }
+        else
+        {
+            isRunning = false;
+            isCrouching = false;
+            speed = walk;
+            player.transform.localScale = normalScale;
+        }
+        // Detects if the player is moving.
+        // Useful if you want footstep sounds and or other features in your game.
+        isMoving = cc.velocity.sqrMagnitude > 0.0f ? true : false;
     }
 }
