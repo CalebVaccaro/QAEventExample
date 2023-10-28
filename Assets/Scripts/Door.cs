@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
         var player = collider.GetComponent<Player>();
         if (player != null)
         {
-            if (IsScoreSameAsPlayer(player.Score))
+            if (IsSameScoreAsDoor(player.Score))
             {
                 player.SubtractScore(score);
                 openDoorEvent.Invoke();
@@ -36,7 +36,7 @@ public class Door : MonoBehaviour
         }
     }
 
-    private bool IsScoreSameAsPlayer(int playerScore)
+    private bool IsSameScoreAsDoor(int playerScore)
     {
         return score.IsSameScore(playerScore);
     }

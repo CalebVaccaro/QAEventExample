@@ -1,41 +1,39 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f;
-    public Transform cameraTransform; // Reference to the main camera's transform
+    public float rotationSpeed = 3.0f;
 
-    private float _turnSmoothVelocity;
-    public float _turnSmoothTime = 1f;
-    private void Update()
+    private CharacterController controller;
+
+    private void Start()
     {
-        Move();
+        controller = GetComponent<CharacterController>();
     }
 
-    private void Move()
+    private void Update()
     {
+        // Input handling
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0.0f, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
+        // Calculate the movement direction based on camera's forward direction
+        Vector3 forwardDirection = Camera.main.transform.forward;
+        forwardDirection.y = 0.0f;
+        forwardDirection.Normalize();
+
+        Vector3 moveDirection = (forwardDirection * vertical + Camera.main.transform.right * horizontal).normalized;
+
+        // Apply rotation based on input
+        if (moveDirection != Vector3.zero)
         {
-            Vector3 forward = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
-            Vector3 moveDirection = forward * vertical;
-
-            // Move the player
-            transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
-
-            // Only rotate the player when there is horizontal input
-            if (Mathf.Abs(horizontal) > 0.1f)
-            {
-                Vector3 right = Vector3.Cross(Vector3.up, forward);
-                moveDirection += right * horizontal;
-
-                float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
-                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _turnSmoothTime);
-                transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
-            }
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+
+        // Apply movement to the CharacterController
+        controller.Move(moveDirection * speed * Time.deltaTime);
     }
 }

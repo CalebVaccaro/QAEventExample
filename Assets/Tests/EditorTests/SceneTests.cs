@@ -15,14 +15,22 @@ public class SceneTests
         Assert.IsNotNull(door, "Door not found in scene");
 
         // Act
-        var items = GameObject.FindObjectsOfType<Item>();
+        Item[] items = GameObject.FindObjectsOfType<Item>();
         foreach (var item in items)
         {
             player.AddScore(item.Score);
         }
 
         // Assert
-        bool canOpenDoor = player.Score >= door.Score;
+        // Problem 1
+        //bool canOpenDoor = door.Score >= player.Score;
+        
+        // Solution 1 / Problem 2
+        //bool canOpenDoor = player.Score == door.Score;
+
+        // Solution 2
+         bool canOpenDoor = player.Score >= door.Score;
+        
         Assert.IsTrue(canOpenDoor, "Player cannot get through the door with the current items and score");
     }
 
@@ -41,7 +49,7 @@ public class SceneTests
         Assert.IsNotNull(level, "Level not found in scene");
 
         // Assert
-        var items = Object.FindObjectsOfType<Item>();
+        Item[] items = Object.FindObjectsOfType<Item>();
         foreach (var item in items)
         {
             player.AddScore(item.Score);
@@ -50,7 +58,7 @@ public class SceneTests
         player.SubtractScore(door.Score);
 
         // Act
-        var canOpenDoor = player.Score >= 0;
+        bool canOpenDoor = player.Score >= 0;
         Assert.IsTrue(canOpenDoor, "Items Allocated Score cannot open door");
     }
 }

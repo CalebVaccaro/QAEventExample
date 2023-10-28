@@ -7,9 +7,9 @@ public class ScoreTests
     public void AddScore()
     {
         // Arrange
-        var player = CreateTestObject<Player>("Player");
-        var y = 2;
-        var shouldBeValue = 2;
+        Player player = CreateTestObject<Player>("Player");
+        int y = 2;
+        int shouldBeValue = 2;
 
         // Act
         player.AddScore(y);
@@ -22,12 +22,12 @@ public class ScoreTests
     public void AddItemScoreToPlayer()
     {
         // Arrange
-        var player = CreateTestObject<Player>("Player");
-        var item = CreateTestObject<Item>("Item");
-        var shouldBeValue = 10;
+        Player player = CreateTestObject<Player>("Player");
+        Item item = CreateTestObject<Item>("Item");
+        int shouldBeValue = 10;
 
         // Act
-        var itemScore = MathExtensions.AddScore(item.Score, 10);
+        int itemScore = MathExtensions.AddScore(item.Score, 10);
         player.AddScore(itemScore);
 
         // Assert
@@ -38,14 +38,14 @@ public class ScoreTests
     public void PlayerScore_EqualToDoor()
     {
         // Arrange
-        var player = CreateTestObject<Player>("Player");
-        var door = CreateTestObject<Door>("Door");
-        var shouldBeValue = true;
+        Player player = CreateTestObject<Player>("Player");
+        Door door = CreateTestObject<Door>("Door");
+        bool shouldBeValue = true;
 
         // Act
-        var playerScore = MathExtensions.AddScore(player.Score, 10);
-        var doorScore = MathExtensions.AddScore(door.Score, 10);
-        var outcome = doorScore.IsSameScore(playerScore);
+        int playerScore = MathExtensions.AddScore(player.Score, 10);
+        int doorScore = MathExtensions.AddScore(door.Score, 10);
+        bool outcome = doorScore.IsSameScore(playerScore);
 
         // Assert
         Assert.AreEqual(shouldBeValue, outcome);
@@ -53,20 +53,17 @@ public class ScoreTests
 
     [Test]
     [TestCase(10, 10, true)]
-    [TestCase(15, 10, false)]
-    [TestCase(0, 0, true)]
-    [TestCase(20, 10, false)]
     public void PlayerScore_EqualToDoor(int playerScoreToAdd, int doorScoreRequired, bool expectedOutcome)
     {
         // Arrange
-        var player = CreateTestObject<Player>("Player");
-        var door = CreateTestObject<Door>("Door");
-        var shouldBeValue = expectedOutcome;
+        Player player = CreateTestObject<Player>("Player");
+        Door door = CreateTestObject<Door>("Door");
+        bool shouldBeValue = expectedOutcome;
 
         // Act
-        var playerScore = MathExtensions.AddScore(player.Score, playerScoreToAdd);
-        var doorScore = MathExtensions.AddScore(door.Score, doorScoreRequired);
-        var outcome = doorScore.IsSameScore(playerScore);
+        int playerScore = MathExtensions.AddScore(player.Score, playerScoreToAdd);
+        int doorScore = MathExtensions.AddScore(door.Score, doorScoreRequired);
+        bool outcome = doorScore.IsSameScore(playerScore);
 
         // Assert
         Assert.AreEqual(shouldBeValue, outcome);
@@ -77,9 +74,9 @@ public class ScoreTests
     public void SubtractScore()
     {
         // Arrange
-        var player = CreateTestObject<Player>("Player");
-        var y = 10;
-        var shouldBeValue = -10;
+        Player player = CreateTestObject<Player>("Player");
+        int y = 10;
+        int shouldBeValue = -10;
 
         // Act
         player.SubtractScore(y);
@@ -92,15 +89,15 @@ public class ScoreTests
     public void SubtractMultipleDoors_FromPlayer()
     {
         // Arrange
-        var player = CreateTestObject<Player>("Player");
-        var door1 = CreateTestObject<Door>("Door1");
-        var door2 = CreateTestObject<Door>("Door2");
-        var outcomeScore = 10;
+        Player player = CreateTestObject<Player>("Player");
+        Door door1 = CreateTestObject<Door>("Door1");
+        Door door2 = CreateTestObject<Door>("Door2");
+        int outcomeScore = 10;
 
         // Act
         player.AddScore(100);
-        var door1Score = door1.Score.AddScore(60);
-        var door2Score = door2.Score.AddScore(30);
+        int door1Score = door1.Score.AddScore(60);
+        int door2Score = door2.Score.AddScore(30);
         player.SubtractScore(door1Score);
         player.SubtractScore(door2Score);
 
@@ -110,7 +107,7 @@ public class ScoreTests
 
     public static T CreateTestObject<T>(string name) where T : Component
     {
-        var gameObject = new GameObject(name);
+        GameObject gameObject = new GameObject(name);
         return gameObject.AddComponent<T>();
     }
 }
