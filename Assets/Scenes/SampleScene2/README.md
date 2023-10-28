@@ -2,6 +2,8 @@
 
 # Testing Player-Item Interaction and Door Accessibility
 
+[Cont. Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
+
 ## Overview
 In this sample scene, we'll focus on creating a basic unit test to validate the player's ability to collect items, accumulate score, and subsequently access a door.
 

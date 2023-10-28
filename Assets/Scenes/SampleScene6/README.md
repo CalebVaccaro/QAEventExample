@@ -2,6 +2,8 @@
 
 # Validating Player Progression with Multiple Doors
 
+[Cont. Ticket 3](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-4)
+
 ## Introduction
 In this sample scene, we are conducting tests to ensure that a player can navigate through a level with multiple doors, each requiring a certain score to pass.
 

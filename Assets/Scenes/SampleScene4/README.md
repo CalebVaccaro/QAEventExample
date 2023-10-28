@@ -2,6 +2,8 @@
 
 # Debugging and Resolving Unit Test Failures
 
+[Ticket 2](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-3)
+
 ## Introduction
 In this example, we have a Unity scene set up with a player, a door, and several items. A unit test is in place to ensure that the player can collect enough items to open the door. However, the test is currently failing because there are not enough items in the scene. Your task is to add more items to the scene so that the unit test passes.
 

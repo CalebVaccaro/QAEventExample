@@ -2,6 +2,8 @@
 
 # Implementing and Testing Score Subtraction
 
+[Ticket 3](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-4)
+
 ## Introduction
 This guide walks through the implementation of a score subtraction feature in a game, as well as the creation of unit tests to validate its functionality.
 

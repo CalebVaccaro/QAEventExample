@@ -4,6 +4,8 @@
 
 Unit testing ensures each part of your game works as expected, enhancing code reliability and maintainability.
 
+[Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
+
 ### Arrange-Act-Assert Pattern Breakdown
 
 - **Arrange**: Set up the conditions for your test. Initialize objects, create mock data, and define expected outcomes.

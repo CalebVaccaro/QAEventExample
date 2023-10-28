@@ -34,11 +34,11 @@ We will be working on a genre-defining Item Collection Adventure game. In this g
 Each link below leads to a sample scene exploring various topics, accompanied by corresponding tickets in our issue tracker to exemplify a real-world workflow and provide additional context and details.
 
 - [Scene 1: Review Unit Tests (Arrange, Act, Assert)](./Assets/Scenes/SampleScene1/README.md)
-  - [Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-2)
+  - [Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
 - [Scene 2: Testing Player-Item Interaction and Door Accessibility](./Assets/Scenes/SampleScene2/README.md)
-  - [Cont. Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-2)
+  - [Cont. Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
 - [Scene 3: Update Unit Test to Accomdate More Levels](./Assets/Scenes/SampleScene3/README.md)
-  - [Cont. Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-2)
+  - [Cont. Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
 - [Scene 4: Debugging and Resolving Unit Test Failures](./Assets/Scenes/SampleScene4/README.md)
   - [Ticket 2](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-3)
 - [Scene 5: Implementing and Testing Score Subtraction](./Assets/Scenes/SampleScene4/README.md)

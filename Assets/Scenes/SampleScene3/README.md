@@ -2,6 +2,8 @@
 
 # Update Unit Test to Accomdate More Levels
 
+[Cont. Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
+
 ## Context:
 In our previous work, we created a unit test to verify if a player could open a door based on collected items. However, this was under the assumption that the player's score needs to match the door's score exactly.
 
