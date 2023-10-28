@@ -26,6 +26,7 @@ Requires Unity `2019.2` or higher
 
 ## Example Game Overview
 We will be working on a genre-defining Item Collection Adventure game. In this game, players must collect various items to pass-through doors, and reaching the end of the level.
+
 <img src="qaeventexample_game.gif" width="300"/>
 
 ## Scenes to Explore
