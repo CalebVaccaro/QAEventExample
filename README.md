@@ -14,8 +14,7 @@ We will be working on a genre-defining Item Collection Adventure game. In this g
 ### Tools and Resources
 Game Code: All the game code is available on [GitHub]().
 
-Tasks for the Day
-Today, we have two QA tickets to resolve:
+## Tasks to Complete
 
 Review the QA Board: https://cybersurferllc.youtrack.cloud/agiles/141-13/current
 - [Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1): Fix broken unit tests 

@@ -21,16 +21,13 @@ public class SceneTests
             player.AddScore(item.Score);
         }
 
-        // Assert
-        // Problem 1
-        //bool canOpenDoor = door.Score >= player.Score;
-        
         // Solution 1 / Problem 2
-        //bool canOpenDoor = player.Score == door.Score;
+        bool canOpenDoor = player.Score == door.Score;
 
         // Solution 2
-         bool canOpenDoor = player.Score >= door.Score;
-        
+        //bool canOpenDoor = player.Score >= door.Score;
+
+        // Assert
         Assert.IsTrue(canOpenDoor, "Player cannot get through the door with the current items and score");
     }
 

@@ -96,8 +96,8 @@ public class ScoreTests
 
         // Act
         player.AddScore(100);
-        int door1Score = door1.Score.AddScore(60);
-        int door2Score = door2.Score.AddScore(30);
+        int door1Score = MathExtensions.AddScore(door1.Score, 60);
+        int door2Score = MathExtensions.AddScore(door2.Score, 30);
         player.SubtractScore(door1Score);
         player.SubtractScore(door2Score);
 
