@@ -14,12 +14,21 @@ We will be working on a genre-defining Item Collection Adventure game. In this g
 ### Tools and Resources
 Game Code: All the game code is available on [GitHub]().
 
-## Tasks to Complete
+## Scenes to Explore
 
-Review the QA Board: https://cybersurferllc.youtrack.cloud/agiles/141-13/current
-- [Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1): Fix broken unit tests 
-- [Ticket 2](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1): Fix Game Level with broken unit tests
-- [Ticket 3](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-3): Unit Test a New Level another developer created
-- [Ticket 4](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-4): Add Mechanic where Doors subtract from Player score
-- [Ticket 5](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-5): Create new Level with New Mechanics
+Each link below leads to a sample scene exploring various topics, accompanied by corresponding tickets in our issue tracker to exemplify a real-world workflow and provide additional context and details.
+
+- [Scene 0: Review Unit Tests (Arrange, Act, Assert)](./Assets/Scenes/SampleScene0/README.md)
+- [Scene 1: Unit Test Play Mode Collisions](./Assets/Scenes/SampleScene1/README.md)
+- [Scene 2: Update Unit Tests to Accommodate More Levels](./Assets/Scenes/SampleScene2/README.md)
+  - [Ticket 2](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-2)
+- [Scene 3: Unit Test a New Level Another Developer Created](./Assets/Scenes/SampleScene3/README.md)
+  - [Ticket 3](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-3)
+- [Scene 4: Add Mechanic Where Doors Subtract from Player Score](./Assets/Scenes/SampleScene4/README.md)
+  - [Ticket 4](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-4)
+- [Scene 5: Create New Level with New Mechanics](./Assets/Scenes/SampleScene5/README.md)
+  - [Ticket 5](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-5)
+
+
+
 

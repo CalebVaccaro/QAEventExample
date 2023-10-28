@@ -14,7 +14,7 @@ public class Level : MonoBehaviour
     private void EndLevel()
     {
         Debug.Log("Level Complete");
-        //SceneManager.LoadScene("LevelSelect");
+        ReloadScene();
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -24,5 +24,11 @@ public class Level : MonoBehaviour
         {
             onCompleteLevel.Invoke();
         }
+    }
+
+    private void ReloadScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }

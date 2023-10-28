@@ -9,7 +9,7 @@ public class PlayModeTests
     [UnitySetUp]
     public IEnumerator SetUpScene()
     {
-        yield return SceneManager.LoadSceneAsync("SampleScene1");
+        yield return SceneManager.LoadSceneAsync("SampleScene-PlayMode");
         yield return null;  // Ensure all scene objects are fully loaded
     }
 
@@ -19,18 +19,19 @@ public class PlayModeTests
         // Arrange
         var player = GameObject.Find("Player").GetComponent<Player>();
         var item = GameObject.Find("Item").GetComponent<Item>();
+        var shouldBeValue = 1;
 
         // Ensure the player and item were found
         Assert.IsNotNull(player, "Player not found");
         Assert.IsNotNull(item, "Item not found");
 
-        // Move player to item position (if necessary)
+        // Move player to item position
         player.transform.position = item.transform.position;
 
         // Act
-        yield return new WaitForSeconds(1);  // Adjust time as necessary
+        yield return new WaitForSeconds(1);
 
         // Assert
-        Assert.AreEqual(1, player.Score);
+        Assert.AreEqual(shouldBeValue, player.Score);
     }
 }
