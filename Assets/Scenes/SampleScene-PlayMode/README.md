@@ -1,4 +1,4 @@
-<img src="SampleScene-PlayMode.png" width="300" />
+<img src="SampleScene-PlayMode.PNG" width="300" />
 
 # Sample Scene - Play Mode Unit Testing: Player and Item Collision
 

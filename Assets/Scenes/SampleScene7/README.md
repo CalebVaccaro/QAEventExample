@@ -1,4 +1,4 @@
-<img src="SampleScene7.png" width="300"/>
+<img src="SampleScene7.PNG" width="300"/>
 
 # Final Challenge: Craft Your Own Level!
 

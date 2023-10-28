@@ -1,4 +1,4 @@
-<img src="SampleScene1.png" width="300"/>
+<img src="SampleScene1.PNG" width="300"/>
 
 # Review Unit Tests (Arrange, Act, Assert)
 

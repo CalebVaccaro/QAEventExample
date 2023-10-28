@@ -1,4 +1,4 @@
-<img src="SampleScene2.png" width="300"/>
+<img src="SampleScene2.PNG" width="300"/>
 
 # Testing Player-Item Interaction and Door Accessibility
 

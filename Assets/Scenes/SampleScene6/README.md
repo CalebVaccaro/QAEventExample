@@ -1,4 +1,4 @@
-<img src="SampleScene6.png" width="300"/>
+<img src="SampleScene6.PNG" width="300"/>
 
 # Validating Player Progression with Multiple Doors
 

@@ -1,4 +1,4 @@
-<img src="SampleScene3.png" width="300"/>
+<img src="SampleScene3.PNG" width="300"/>
 
 # Update Unit Test to Accomdate More Levels
 

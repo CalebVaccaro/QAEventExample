@@ -1,4 +1,4 @@
-<img src="SampleScene4.png" width="300"/>
+<img src="SampleScene4.PNG" width="300"/>
 
 # Debugging and Resolving Unit Test Failures
 

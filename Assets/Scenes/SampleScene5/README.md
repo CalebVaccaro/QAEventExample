@@ -1,4 +1,4 @@
-<img src="SampleScene5.png" width="300"/>
+<img src="SampleScene5.PNG" width="300"/>
 
 # Implementing and Testing Score Subtraction
 
