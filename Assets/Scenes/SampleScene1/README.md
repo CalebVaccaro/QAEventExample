@@ -2,7 +2,15 @@
 
 # Review Unit Tests (Arrange, Act, Assert)
 
-Unit testing ensures each part of your game works as expected, enhancing code reliability and maintainability.
+Unit testing ensures each part of your game works as expected, enhancing code reliability and maintainability. One of the popular libraries to perform unit testing in .NET applications is NUnit, and specifically, NUnit.Framework.
+
+### Understanding NUnit.Framework
+
+NUnit.Framework is a library in the NUnit testing framework that provides a set of attributes, assertions, and utilities to create and run unit tests in .NET applications.
+
+```csharp
+using NUnit.Framework
+```
 
 [Ticket 1](https://cybersurferllc.youtrack.cloud/agiles/141-13/current?tab=chart&issue=EXTERNAL-1)
 
