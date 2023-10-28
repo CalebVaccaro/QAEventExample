@@ -1,3 +1,5 @@
+<img src="SampleScene1.png" width="300"/>
+
 # Review Unit Tests (Arrange, Act, Assert)
 
 Unit testing ensures each part of your game works as expected, enhancing code reliability and maintainability.

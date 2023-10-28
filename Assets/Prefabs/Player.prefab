@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 5112859811351350281}
 --- !u!1 &4267648912452402864
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 872767722647478164}
   - component: {fileID: 8231431523055558163}
   - component: {fileID: 3893726490349081161}
+  - component: {fileID: 8220048734044634362}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -375,8 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  cameraTransform: {fileID: 7518867140771343270}
-  _turnSmoothTime: 0.5
+  rotationSpeed: 3
 --- !u!136 &8231431523055558163
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -427,6 +427,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!143 &8220048734044634362
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691710193404206076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &790548756999187946
 PrefabInstance:
   m_ObjectHideFlags: 0

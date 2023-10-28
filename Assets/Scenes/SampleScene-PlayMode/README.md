@@ -1,3 +1,5 @@
+<img src="SampleScene-PlayMode.png" width="300" />
+
 # Sample Scene - Play Mode Unit Testing: Player and Item Collision
 
 Welcome to Scene 1, where we delve into play mode unit testing in Unity, focusing on interactions between the player and an item.

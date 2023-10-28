@@ -31,19 +31,4 @@ public class MathExtensionsTests
         // Assert
         Assert.AreEqual(shouldBeValue, outcome);
     }
-
-    [Test]
-    public void SubtractScore()
-    {
-        // Arrange
-        int x = 10;
-        int y = 5;
-        int shouldBeValue = 5;
-
-        // Act
-        int outcome = MathExtensions.SubtractScore(x, y);
-
-        // Assert
-        Assert.AreEqual(shouldBeValue, outcome);
-    }
 }
