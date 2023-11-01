@@ -3,7 +3,6 @@ name: Unity Test Workflow
 on: push
 
 env:
-  PROJECT_NAME: QAEVENTEXAMPLE
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 jobs:
@@ -52,7 +51,7 @@ jobs:
         id: testRunner
         with:
           testMode: all
-          artifactsPath: ${{ PROJECT_NAME }}-artifacts
+          artifactsPath: qaeventexample-artifacts
 
       - uses: actions/upload-artifact@v2
         with:
