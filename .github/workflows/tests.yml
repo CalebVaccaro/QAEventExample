@@ -47,12 +47,24 @@ jobs:
             Library-test-project-
             Library-
 
-      - uses: webbertakken/unity-test-runner@v2
-        id: testRunner
+      - name: Run Edit Mode tests
+        uses: webbertakken/unity-test-runner@v2
         with:
           testMode: editmode
-
-      - uses: actions/upload-artifact@v2
+  
+      - name: Upload Edit Mode test results
+        uses: actions/upload-artifact@v2
         with:
-          name: Test results (all modes)
+          name: Edit Mode Test results
+          path: ${{ steps.testRunner.outputs.artifactsPath }}
+  
+      - name: Run Play Mode tests
+        uses: webbertakken/unity-test-runner@v2
+        with:
+          testMode: playmode
+  
+      - name: Upload Play Mode test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: Play Mode Test results
           path: ${{ steps.testRunner.outputs.artifactsPath }}
