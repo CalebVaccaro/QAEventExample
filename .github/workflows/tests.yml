@@ -50,10 +50,9 @@ jobs:
       - uses: game-ci/unity-test-runner@v3
         id: testRunner
         with:
-          testMode: all
-          artifactsPath: qaeventexample-artifacts
+          testMode: editmode
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Test results (all modes)
+          name: Edit Mode results
           path: ${{ steps.testRunner.outputs.artifactsPath }}
